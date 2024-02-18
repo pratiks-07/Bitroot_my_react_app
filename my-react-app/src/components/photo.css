@@ -1,0 +1,139 @@
+.container {
+  padding: 20px;
+}
+
+@media only screen and (min-width: 1024px) {
+  .image-container {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-around;
+    padding: 20px;
+  }
+  .image-card {
+    width: calc(50% - 20px); 
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    margin-bottom: 20px; 
+  }
+  .image-card:nth-child(n+3) {
+    width: calc(50% - 20px); 
+  }
+  .image-card:hover {
+    transform: translateY(-5px);
+  }
+  .image-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  .card-content {
+    padding: 12px;
+  }
+  .card-content h3 {
+    margin-top: 0;
+    margin-bottom: 28px;
+    font-size: 18px;
+    color: #333;
+  }
+  .card-content p {
+    margin: 0;
+    font-size: 14px;
+    color: #787777;
+    margin-bottom: 16px;
+  }
+  .card-content span {
+    margin: 0;
+    font-size: 14px;
+    color: #5d5c5c;
+    
+  }
+  .card-content .date{
+    float: right;
+  }
+  #name{
+    padding-top: 40px;
+    
+  }
+  .learn-more-overlay {
+    position: absolute; 
+    top: 0;
+    left: 0; 
+    width: 100%; 
+    height: 100%; 
+    background-color: rgba(0, 0, 0, 0.5); 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    color: #fff;
+    font-size: 18px; 
+    opacity: 0; 
+    transition: opacity 0.3s ease; 
+  }
+  
+  .image-card:hover .learn-more-overlay {
+    opacity: 1; 
+    cursor: pointer;
+  }
+ 
+}
+
+@media only screen and (max-width: 768px) {
+  .image-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  .learn-more-overlay {
+    display: none;
+  }
+  .image-card {
+    width: 250px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    margin-bottom: 20px; 
+  }
+  .image-card:hover {
+    transform: translateY(-5px);
+  }
+  .image-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+    cursor: pointer;
+  }
+  .card-content {
+    padding: 12px;
+  }
+  .card-content h3 {
+    margin-top: 0;
+    margin-bottom: 8px;
+    font-size: 18px;
+    color: #333;
+  }
+  .card-content p {
+    margin: 0;
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 8px;
+    
+  }
+  .card-content span {
+    
+    font-size: 14px;
+    color: #5d5c5c;
+  }
+  #name{
+    padding-top: 40px;
+    padding-right: 95px;
+  }
+
+}
